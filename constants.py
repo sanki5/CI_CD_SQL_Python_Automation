@@ -1,6 +1,6 @@
 #Constants Sections
-path = '/Users/sanketkisansanap/personal_projects/CI_CD_python_SQL/sql_scripts'
-server = '3.83.236.200' 
+path = '/Users/sanketkisansanap/personal_projects/CI_CD_SQL_Python_Automation/sql_scripts'
+server = '52.206.142.177' 
 database = 'ETL' 
 username = 'sa' 
 password = 'shree@1234' 

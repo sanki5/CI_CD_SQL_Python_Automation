@@ -27,6 +27,8 @@ def run_sql_file(filename, connection):
         end = time.time()
         print("Time elapsed to run the query:")
         print( str((end - start)*1000) + ' ms')
+
+def get_directory_info(path):
         
         
 def main():    
@@ -37,18 +39,19 @@ def main():
 
         for root, directories, files in os.walk(path, topdown=False):
             for name in files:
-                    
-                    print(f'Script Started for SQL file Executing :: {name} \n')
+                    print(f'###############Execution started############## :: {name}')
+                    print(f'SQL file Executing ::  \n')
                     try :
                         #Function Call 
                         run_sql_file(os.path.join(root, name), connection)    
-                        print(f'Execution is done for SQL File :: {name} \n')
+                        print(f'###############Execution Ended############## :: {name}')
                     except Exception as e :
                         print(e)
                 
-            connection.close()
-            print('Connection is close now . YOU ARE DONE . TAKE A REST')
+        print('Connection is close now . YOU ARE DONE . TAKE A REST')
        
+    
+    
 if __name__ == "__main__":
         main()
         
