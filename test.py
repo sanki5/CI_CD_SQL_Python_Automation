@@ -4,9 +4,6 @@ import datetime
 import time
 from constants import  * 
 import re
-# Some other example server values are
-# server = 'localhost\sqlexpress' # for a named instance
-# server = 'myserver,port' # to specify an alternate port
 
 #Function Definitions 
 def get_file_list(files_path):
@@ -26,14 +23,8 @@ def get_file_list(files_path):
        
     
 def get_server_database_details(filename):
-        #file = open(filename, 'r')
         
         print(filename)
-        
-        #file = open(filename , 'r')
-        
-        
-        
         with open(filename, "r") as f:
             names_list = [line.strip() for line in f if line.strip()]
         #print(names_list)
@@ -64,17 +55,11 @@ def run_sql_file(filename , server_name, database_name):
         filename.close()
             
         
-        
-        #for row in cursor.fetchall():
-        #    print('row = %r' % (row,))
-
         end = time.time()
-        #print("Time elapsed to run the query:")
-        #print( str((end - start)*1000) + ' ms')
         
-#cnxn = pyodbc.connect(r'Driver={SQL Server};Server=DSDEVSQL01;Database=PostTripDM;Trusted_Connection=yes;')
-        
-       
+        #cnxn = pyodbc.connect(r'Driver={SQL Server};Server=DSDEVSQL01;Database=PostTripDM;Trusted_Connection=yes;')
+
+
         #connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)        
 
 
